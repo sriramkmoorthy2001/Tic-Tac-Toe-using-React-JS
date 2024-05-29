@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: skyblue;
+}
+.board-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    height: 100px;
+    width: 100px;
+    font-size: 90px;
+    background-color: aqua;
+}
+.container{
+    margin-top: 180px;
+}
+.status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: darkblue;
+}
