@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./game.css"
+<<<<<<< HEAD
 const  Square = ({values , onSquareClick}) => {
     return (
         <button className="square" onClick={ onSquareClick }>{values}</button>
@@ -40,6 +41,23 @@ const Board = () => {
             <div className="status">
                 {status}
             </div>
+=======
+let  Square = ({value , onSquareClick}) => {
+    return (
+        <button className="square" onClick={ onSquareClick }>{value}</button>
+    )
+}
+let Board = () => {
+    const[squares,setSquares] = useState(Array(9).fill(null));
+    function handleClick(i) {
+        const nextSquares = squares.slice();
+        nextSquares[i] = "X";
+        setSquares(nextSquares);
+        console.log("clicked")
+    }
+    return (
+        <div className="container">
+>>>>>>> a6ba2a19105b9a0c42092767917164185f0e0097
             <div className="board-row">
                 <Square values = {squares[0]} onSquareClick ={ () => handleClick(0)} />
                 <Square values = {squares[1]} onSquareClick ={ () => handleClick(1)} />
@@ -58,6 +76,7 @@ const Board = () => {
         </div>
     )
 } 
+<<<<<<< HEAD
 const calculateWinner = (squares)  => { 
     const lines = [
         [0, 1, 2],
@@ -78,3 +97,6 @@ const calculateWinner = (squares)  => {
     return null;
 }
 export default Board 
+=======
+export default Board  
+>>>>>>> a6ba2a19105b9a0c42092767917164185f0e0097
